@@ -162,6 +162,46 @@
 }
 
 
+/* Color scheme toggle button styles */
+.colorSchemeToggle {
+  width: 30px; /* Adjusted width for toggle */
+  height: 30px; /* Adjusted height for toggle */
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 50%; /* Make it a circle */
+  cursor: pointer;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+}
+
+.colorSchemeToggleIcon {
+  width: 18px; /* Adjusted width for the icon */
+  height: 18px; /* Adjusted height for the icon */
+  font-size: 18px; /* Font size for icon */
+  color: inherit; /* Inherit color from parent */
+  transition: transform 0.3s ease;
+}
+
+/* Style for the active color scheme button */
+.colorSchemeToggleActive {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.colorSchemeToggleIcon.active {
+  transform: translateX(50%);
+}
+
+
+
 
   
 

@@ -1,4 +1,5 @@
-// header.tsx
+// Header.tsx
+
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -14,6 +15,7 @@ export const Header = () => {
   const { t } = useTranslation();
   const router = useRouter();
   const [isDarkMode, setIsDarkMode] = useState(false); // State to track dark mode
+  const [colorScheme, setColorScheme] = useState('default'); // State to track color scheme
 
   // Function to toggle dark mode
   const toggleDarkMode = () => {
@@ -21,14 +23,33 @@ export const Header = () => {
     // You can implement switching between light and dark mode here
   };
 
+  // Function to toggle color scheme
+  const toggleColorScheme = () => {
+    if (colorScheme === 'default') {
+      setColorScheme('alternate1');
+    } else if (colorScheme === 'alternate1') {
+      setColorScheme('alternate2');
+    } else {
+      setColorScheme('default');
+    }
+  };
+
   useEffect(() => {
-    // You can apply dark mode styles to the entire app based on 'isDarkMode' state here
+    // You can apply dark mode styles and color scheme to the entire app based on 'isDarkMode' and 'colorScheme' state here
     if (isDarkMode) {
       document.documentElement.classList.add('dark'); // Apply dark mode styles from globals.css
     } else {
       document.documentElement.classList.remove('dark'); // Remove dark mode styles
     }
-  }, [isDarkMode]);
+
+    // Apply color scheme based on 'colorScheme' state
+    document.documentElement.style.setProperty('--primary-color', `var(--${colorScheme}-primary-color)`);
+    document.documentElement.style.setProperty('--lighter-primary-color', `var(--${colorScheme}-lighter-primary-color)`);
+    document.documentElement.style.setProperty('--secondary-color', `var(--${colorScheme}-secondary-color)`);
+    document.documentElement.style.setProperty('--background-color', `var(--${colorScheme}-background-color)`);
+    document.documentElement.style.setProperty('--text-color', `var(--${colorScheme}-text-color)`);
+    document.documentElement.style.setProperty('--accent-color', `var(--${colorScheme}-accent-color)`);
+  }, [isDarkMode, colorScheme]);
 
   return (
     <header className={styles.header}> {/* Use the CSS module class */}
@@ -78,6 +99,13 @@ export const Header = () => {
               ) : (
                 <FontAwesomeIcon icon={faSun} className={styles.darkModeButtonIcon} />
               )}
+            </button>
+
+            <button
+              onClick={toggleColorScheme}
+              className={`${styles.colorSchemeToggle} ${colorScheme === 'alternate1' ? styles.colorSchemeToggleActive : ''}`}
+            >
+              <i className={`colorSchemeToggleIcon ${colorScheme === 'alternate1' ? 'active' : ''} fas fa-paint-brush`}></i>
             </button>
 
             <div className={styles.languageStyle}>
