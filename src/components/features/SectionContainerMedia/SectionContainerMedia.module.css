@@ -1,0 +1,76 @@
+/* SectionContainer.module.css */
+
+.sectionContainer {
+    gap: 8px;
+    display: flex;
+    background-color: var(--background-color); /* Use global variable for background color */
+  }
+  
+  .leftColumn,
+  .rightColumn {
+    flex: 1;
+    padding: 3rem 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: flex-start; /* Start content at the top (left in a vertical layout) */
+  }
+  
+  .leftColumn {
+    background-color: var(--primary-color); /* Use global variable for left column background color */
+  }
+  
+  .rightColumn {
+    background-color: var(--background-color); /* Use global variable for right column background color */
+  }
+  
+  .H1 {
+    background-color: var(--accent-color); /* Use global variable for H1 background color */
+    color: var(--text-color); /* Use global variable for H1 text color */
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    align-self: flex-start; /* Vertically align the H1 within the flex container */
+    flex-grow: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .H3 {
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: 700; /* Medium font weight */
+    color: var(--text-color); /* Use global variable for H3 text color */
+    font-size: 1.5rem; /* 2rem font size */
+    /* Add any other styles you want for the <h3> tag */
+  }
+  
+  .extraText {
+    /* Define styles for the left column p here */
+    font-size: 1rem;
+    color: var(--text-color); /* Use global variable for extra text color */
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    /* Define styles for the right column button here */
+    background-color: var(--primary-color); /* Use global variable for button background color */
+    color: #fff; /* Use global variable for button text color */
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .sectionContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .rightColumn {
+      padding: 0; /* Remove padding for the right column in mobile view */
+    }
+  }
+  

@@ -1,0 +1,67 @@
+/* FAQComponent.module.css */
+
+.faqContainer {
+  background-color: var(--accent-color);
+  margin: 0px;
+  padding: var(--page-padding);
+  text-align: center; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faqContentContainer{
+  background-color: var(--background-color);
+  
+  
+}
+
+.faqTitle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--background-color);
+  position: relative; /* Needed for the glow effect */
+  display: inline-block; /* Ensure the container fits the text */
+
+}
+
+.faqSubtitle {
+  font-size: 1.2rem; /* Adjust font size as needed */
+  color: var(--background-color); /* Use text color from global CSS */
+  margin-bottom: 16px; /* Add space below the subtitle */
+}
+
+.faqItem {
+  margin-bottom: 8px;
+}
+
+.question {
+  width: 100%;
+  text-align: left;
+  background: var(--background-color);
+  color: var(--text-color); 
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  text-align: left ;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.answer {
+  padding: 10px;
+  background: var(--background-color); /* Use background color from global CSS */
+  color: var(--text-color);
+  font-weight: 400;
+  border-top: none;
+  font-size: 1.2em;
+  align-items: left;
+  text-align: left ;
+
+  
+}
+

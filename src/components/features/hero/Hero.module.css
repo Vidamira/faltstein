@@ -1,0 +1,77 @@
+/* hero.module.css */
+
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--primary-color)
+  
+}
+
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Set the height to 30vh */
+  z-index: 1; /* Place the background image below other elements */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7; /* Optional: Adjust the opacity of the background */
+}
+
+.contentContainer {
+  position: relative;
+  z-index: 1;
+ 
+  background-size: cover;
+  background-position: center;
+  ; /* Use global variable for background color */
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: var(--page-padding);
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.heroTitle {
+  font-size: 7rem;
+  font-weight: bold;
+  color: var(--text-color); /* Use global variable for text color */
+  margin-bottom: 1rem;
+  z-index: 11;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  z-index: 11;
+}
+
+.heroButton {
+  background-color: var(--primary-color); /* Use global variable for primary color */
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: #05386e;
+}

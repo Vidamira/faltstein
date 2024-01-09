@@ -1,0 +1,87 @@
+/* CardsComponent.module.css */
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--background-color);
+  padding: var(--page-padding);
+  
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--background-color);
+  
+  
+}
+
+/* Style heading */
+
+.cardsContainer h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-color);
+  position: relative; /* Needed for the glow effect */
+  display: inline-block;
+}
+
+.cardsContainer p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 16px;
+  text-align: center;
+  text-wrap: wrap;
+  
+}
+
+
+.card {
+  flex-basis: calc(33% - 10px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 16px;
+  margin: 5px;
+  text-align: center;
+  height: auto;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 1.2em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.card p {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: var(--text-color);
+  
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex-basis: 100%;
+  }
+}

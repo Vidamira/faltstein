@@ -1,34 +1,40 @@
+/* globals.css */
+
+/* Tailwind CSS styles (keep these) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply text-sm text-gray800 md:text-sm bg-gray100;
-  }
+/* Global styles and variables (add your custom styles here) */
 
-  .h1,
-  h1 {
-    @apply text-xl leading-tighter font-semibold md:text-4xl;
-  }
+/* Define custom padding size for components */
+:root {
+  --page-padding: 1.5rem 8rem; /* Adjust the values as needed */
+}
 
-  .h2,
-  h2 {
-    @apply text-xl leading-tight font-semibold md:text-3xl;
-  }
+/* Define colors and color palette for LIGHT mode */
+:root {
+  --primary-color: #007bff;        /* Primary color (e.g., links, buttons) */
+  --secondary-color: #333;        /* Secondary color (e.g., headings, borders) */
+  --background-color: #f8f8f8;    /* Background color for the entire page */
+  --text-color: #333;             /* Text color (e.g., body text) */
+  --accent-color: #ffae00;        /* Accent color (e.g., call-to-action) */
+}
 
-  .h3,
-  h3 {
-    @apply text-base leading-relaxed font-semibold md:text-xl;
-  }
+/* Define colors and color palette for DARK mode */
+:root.dark {
+  --primary-color: #007bff;        /* Primary color (e.g., links, buttons) */
+  --secondary-color: #333;        /* Secondary color (e.g., headings, borders) */
+  --background-color: #111;       /* Dark mode background color */
+  --text-color: #fff;             /* Dark mode text color */
+  --accent-color: #ffae00;        /* Accent color (e.g., call-to-action) */
+}
 
-  .h4,
-  h4 {
-    @apply text-xs leading-normal font-semibold md:text-base;
-  }
-
-  p {
-    @apply text-gray600 tracking-snug font-normal leading-snug md:leading-normal;
-  }
+/* Global styles */
+/* For example, you can define a class for dark mode */
+.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  /* Add more dark mode styles here */
 }
 

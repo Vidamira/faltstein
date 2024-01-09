@@ -1,0 +1,59 @@
+/* AlternatingGridComponent.module.css */
+
+.gridContainer {
+    display: grid; /* Change to grid display */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns, adjust as needed */
+    gap: 0; /* Remove gaps between grid items */
+    height: 60vh;
+  }
+  
+  .gridItem {
+    overflow: hidden;
+  }
+  
+  .imageCard {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .textCard {
+    padding: 1rem;
+    height: 100%;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .textCard h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .textCard button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .textCard button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+  }
+  
+  .row1 {
+    background-color: var(--primary-color);
+  }
+  
+  .row2 {
+    background-color: var(--accent-color);
+  }
+  

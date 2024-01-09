@@ -1,0 +1,160 @@
+/* header.module.css */
+
+/* Header styles */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: var(--page-padding);
+    background-color: var(--background-color); /* Add your header background color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add your header box shadow */
+  }
+  
+  /* Container styles */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Links styles */
+  .links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .linksLeft {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Pushes links to the left */
+  }
+  
+  .linksRight {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes links to the right */
+  }
+  
+  .link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--text-color); /* Add your link color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #007bff; /* Add your link hover color */
+  }
+  
+  .activeLink {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #007bff; /* Add your active link color */
+    font-weight: bold;
+  }
+  
+  /* Hamburger menu styles for small screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .linksLeft {
+      display: none; /* Hide links on small screens */
+    }
+  
+    .linksRight {
+      display: flex;
+      align-items: center;
+    }
+  
+    .hamburgerIcon {
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 16px;
+    }
+  
+    .links {
+      display: none; /* Hide links on small screens */
+    }
+  
+    /* Show links when the hamburger menu is active */
+    .showLinks {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+  
+    .link {
+      margin-right: 0; /* Reset margin for links in mobile view */
+      margin-bottom: 10px; /* Add spacing between mobile links */
+    }
+  }
+
+ /* Dark mode toggle styles */
+/* Dark mode toggle styles */
+.darkModeToggle {
+    display: flex;
+    align-items: center;
+}
+
+.darkModeButton {
+    width: 48px;
+    height: 24px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon horizontally */
+    padding: 2px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Added box shadow */
+    overflow: hidden; /* Hide overflow for sun/moon icons */
+}
+
+.darkModeButtonActive {
+    width: 48px;
+    height: 24px;
+    background-color: var(--secondary-color); /* Background color for active dark mode */
+    cursor: pointer;
+    margin-left: 16px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon horizontally */
+    border-radius: 12px;
+    padding: 2px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Added box shadow */
+    overflow: hidden; /* Hide overflow for sun/moon icons */
+}
+
+/* Style for sun/moon icons */
+.darkModeButtonIcon {
+    width: 24px;
+    height: 24px;
+    color: var(--text-color); /* Icon color */
+    transition: color 0.3s ease; /* Transition icon color */
+}
+
+
+
+  
+
+  
+  /* Language Selector styles */
+.languageStyle {
+    /* Add your styles for the language selector here */
+    margin-left: 16px; /* Adjust spacing as needed */
+    background-color: #f8f8f8; /* Add your text color */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 2px 4px;
+  }
+

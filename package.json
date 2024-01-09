@@ -15,7 +15,8 @@
     "type-check": "tsc --noEmit",
     "graphql-codegen:generate": "graphql-codegen -r dotenv/config --config codegen.ts",
     "graphql-codegen:watch": "graphql-codegen --watch -r dotenv/config --config codegen.ts",
-    "setup": "./bin/setup.sh"
+    "setup": "./bin/setup.sh",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
@@ -29,10 +30,14 @@
   "dependencies": {
     "@contentful/f36-icons": "^4.23.2",
     "@contentful/f36-tokens": "^4.0.1",
-    "@contentful/rich-text-react-renderer": "^15.16.2",
     "@contentful/live-preview": "^2.11.1",
+    "@contentful/rich-text-react-renderer": "^15.16.2",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@next/bundle-analyzer": "^13.0.4",
     "dotenv": "^16.0.3",
+    "font-awesome": "^4.7.0",
     "graphql": "^16.6.0",
     "next": "^13.4.1",
     "next-compose-plugins": "^2.2.1",
@@ -40,9 +45,11 @@
     "next-pwa": "^5.6.0",
     "next-seo": "^5.15.0",
     "next-sitemap": "^3.1.32",
+    "p5": "^1.9.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-focus-lock": "^2.9.2",
+    "react-p5-wrapper": "^4.1.2",
     "sharp": "^0.31.3"
   },
   "devDependencies": {
@@ -54,6 +61,7 @@
     "@svgr/webpack": "^6.5.1",
     "@tailwindcss/typography": "^0.5.8",
     "@types/node": "18.11.9",
+    "@types/p5": "^1.7.6",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
@@ -67,7 +75,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^8.0.2",
+    "husky": "^8.0.3",
     "i18next": "^21.9.2",
     "i18next-http-backend": "^1.4.4",
     "lint-staged": "^13.0.3",
@@ -75,7 +83,7 @@
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwind-merge": "^1.8.0",
-    "tailwindcss": "^3.2.4",
+    "tailwindcss": "^3.4.1",
     "typescript": "4.9.3",
     "typescript-graphql-request": "^4.4.6"
   }

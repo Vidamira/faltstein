@@ -1,31 +1,50 @@
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { GetStaticProps } from 'next';
 import { Container } from '@src/components/shared/container';
 import { revalidateDuration } from '@src/pages/utils/constants';
 import { useTranslation } from 'next-i18next';
 import { Hero } from '@src/components/features/hero';
+import { SectionContainer } from '@src/components/features/SectionContainer';
 import { CardsComponent } from '@src/components/features/CardsComponent';
-import { FAQComponent } from '@src/components/features/FAQComponent';
 import { AlternatingGridComponent } from '@src/components/features/AlternatingGridComponent';
-import { SectionContainerMedia } from '@src/components/features/SectionContainerMedia';
+import { HeroP5 } from '@src/components/features/HeroP5';
 
 const Page = () => {
   const { t } = useTranslation();
 
+  const handleButtonClick = () => {
+    // Handle button click logic here
+  };
+
+  const leftColumnContent = {
+    h1Text: "who we are",
+    h3Text: "We are a tech agency specializing in automatic websites and connecting clients with artificial intelligence.",
+  };
+
+  const rightColumnContent = {
+    h1Text: "what we do",
+    pText: "We provide cutting-edge technology solutions to automate your business processes and leverage the power of artificial intelligence.",
+    buttonText: "Start Automating",
+  };
+
   return (
     <>
-      {/* Include SEO fields if needed */}
-      {/* <SeoFields {...page.seoFields} /> */}
-
       <Container>
         {/* Add your static content here */}
-        <Hero
-        background="assets/abstract-1.jpg" // Define the URL for the background
-        title="Your Title"
-        subtitle="Your Subtitle"
-        buttonText="Your Button Text"
-        onClick={() => {}}
-      />
-      <CardsComponent
+        <HeroP5
+          background="/p5sketch.html" // Replace with the path to your p5.js sketch
+          title="LET'S AUTOMATE TOGETHER."
+          subtitle="Discover amazing content here."
+          buttonText="Learn More"
+          onClick={() => {
+            // Handle button click event here
+          }}
+        />
+
+        <SectionContainer
+          leftColumnContent={leftColumnContent}
+          rightColumnContent={rightColumnContent}
+        />
+        <CardsComponent
         heading="How We Help" // Add heading property
         description="Discover how our agency can transform your business with innovative AI integrations designed to drive growth and efficiency."
         cardsData={[
@@ -45,20 +64,6 @@ const Page = () => {
           // Add more cards as needed with their respective titles and text
         ]}
       />
-
-
-      <FAQComponent faqsData={[
-        { question: 'What kind of AI solutions do you provide?', answer: 'Our tech agency specializes in providing a wide range of AI solutions, including natural language processing, computer vision, recommendation systems, and more.' },
-
-        { question: 'How can AI benefit my business?', answer: 'AI can help your business streamline operations, improve customer service, make data-driven decisions, and gain a competitive edge in today\'s market.' },
-        
-        { question: 'Do you offer AI consulting services?', answer: 'Yes, we offer AI consulting services to help businesses assess their AI needs, develop AI strategies, and implement AI solutions tailored to their specific requirements.' },
-        
-        { question: 'What industries do you serve?', answer: 'We work with clients across various industries, including healthcare, finance, e-commerce, manufacturing, and more, to provide AI solutions that address industry-specific challenges.' },
-        
-        { question: 'How do I get started with your AI services?', answer: 'Getting started with our AI services is easy. Simply contact us to discuss your project, and our team will work with you to identify the best AI solutions for your needs and goals.' }
-        // ... more FAQs
-    ]} />
       <AlternatingGridComponent
           items={[
             { type: 'image', imageUrl: '/assets/abstract-1.jpg' },
@@ -68,29 +73,12 @@ const Page = () => {
             // ... add more items as needed
           ]}
         />
-
-          <Hero
+        <Hero
             background="assets/abstract-3.jpg" // Define the URL for the background
             title="what are you automating today?"
             
             
           />
-
-        <SectionContainerMedia
-          leftColumnContent={{
-            h1Text: 'Left Column Heading 1',
-            h3Text: 'Left Column Subheading 1',
-          }}
-          rightColumnContent={{
-            mediaUrl: 'assets/abstract-4.jpg', // Define the URL for the media
-          }}
-        />
-        
-
-        
-
-
-
       </Container>
     </>
   );

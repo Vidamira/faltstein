@@ -122,7 +122,7 @@ export const LanguageSelectorDesktop = ({ localeName, displayName }) => {
                 as={router.asPath}
                 locale={availableLocale}
                 onClick={() => setIsOpen(false)}
-              >
+                legacyBehavior>
                 {displayName(availableLocale).of(localeName(availableLocale))}
               </Link>
             </li>

@@ -1,0 +1,1 @@
+export { default as HeroP5 } from './HeroP5';

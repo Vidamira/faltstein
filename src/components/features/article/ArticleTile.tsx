@@ -17,7 +17,7 @@ export const ArticleTile = ({ article, className }: ArticleTileProps) => {
   const inspectorProps = useContentfulInspectorMode({ entryId: article.sys.id });
 
   return (
-    <Link className="flex flex-col" href={`/${article.slug}`}>
+    <Link className="flex flex-col" href={`/${article.slug}`} legacyBehavior>
       <div
         className={twMerge(
           'flex flex-1 flex-col overflow-hidden rounded-2xl border border-gray300 shadow-lg',

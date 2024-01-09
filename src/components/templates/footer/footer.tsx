@@ -2,25 +2,45 @@ import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 
 import { Container } from '@src/components/shared/container';
+import styles from './footer.module.css'; // Import the CSS styles
 
 export const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="border-t-color mt-10 border-t border-gray200">
-      <Container className="py-8">
-        <h2 className="h4 mb-4">{t('footer.aboutUs')}</h2>
-        <div className="max-w-4xl">{t('footer.description')}</div>
-        <div className="mt-8">
-          {t('footer.powerBy')}{' '}
-          <Link
-            href="https://www.contentful.com"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="text-blue500"
-          >
-            Contentful
-          </Link>
+    <footer className={styles.footer}>
+      <Container className={styles.footerContainer}>
+        <div className={styles.footerContent}>
+          <div className={styles.leftContent}>
+            <h2 className={styles.h2}>{t('footer.aboutUs')}</h2>
+            <div className={styles.maxWidth}>{t('footer.description')}</div>
+          </div>
+          <div className={styles.rightContent}>
+            <Link
+              href="https://www.example.com/link1"
+              rel="noopener noreferrer"
+              target="_blank"
+              className={styles.link}
+            >
+              Link 1
+            </Link>
+            <Link
+              href="https://www.example.com/link2"
+              rel="noopener noreferrer"
+              target="_blank"
+              className={styles.link}
+            >
+              Link 2
+            </Link>
+            <Link
+              href="https://www.example.com/link3"
+              rel="noopener noreferrer"
+              target="_blank"
+              className={styles.link}
+            >
+              Link 3
+            </Link>
+          </div>
         </div>
       </Container>
     </footer>

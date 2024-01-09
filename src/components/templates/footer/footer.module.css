@@ -1,0 +1,62 @@
+/* footer.module.css */
+
+/* Styles for the entire footer */
+.footer {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: #ccc; /* Fallback border color */
+    background-color: var(--background-color);
+    padding: var(--page-padding); /* Use global variable for background color */
+  }
+  
+  /* Styles for the footer container */
+  .footerContainer {
+    padding: 2rem 0; /* Adjust the padding as needed */
+  }
+  
+  /* Styles for the footer content */
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Styles for the left content (h2 and description) */
+  .leftContent {
+    flex: 1;
+  }
+  
+  /* Styles for the h2 element */
+  .h2 {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: var(--text-color); /* Use global variable for text color */
+    margin-bottom: 1rem; /* Adjust the margin-bottom as needed */
+  }
+  
+  /* Styles for the max width of the description */
+  .maxWidth {
+    max-width: 400px; /* Adjust the max width as needed */
+    color: var(--text-color); /* Use global variable for text color */
+  }
+  
+  /* Styles for the right content (links) */
+  .rightContent {
+    display: flex;
+    flex-direction: row; /* Display links in a horizontal row */
+    gap: 1rem; /* Adjust the gap between links as needed */
+  }
+  
+  /* Styles for the links */
+  .link {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    color: var(--text-color); /* Define your link color here */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover styles for the links */
+  .link:hover {
+    color: var(--accent-color); /* Define your hover color here */
+  }
+  

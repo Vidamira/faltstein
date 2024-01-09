@@ -1,0 +1,38 @@
+/* LanguageSelector.module.css */
+
+/* Common styles for all components */
+.relative {
+    position: relative;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .font-normal {
+    font-weight: normal;
+  }
+  
+  .uppercase {
+    text-transform: uppercase;
+  }
+  
+  .mr-1 {
+    margin-right: 0.25rem;
+  }
+  
+  .ml-1 {
+    margin-left: 0.25rem;
+  }
+  
+  .pl-1 {
+    padding-left: 0.25rem;
+  }
+
+.text-color {
+    color: var(--text-color);
+  }
