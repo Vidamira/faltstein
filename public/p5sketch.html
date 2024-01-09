@@ -8,7 +8,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="libraries/p5.js"></script>
   <script src="libraries/p5.dom.js"></script>
+
+  <style>
+    /* Add CSS here */
+    html {
+      max-width: 100vw;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+  </style>
 </head>
+
 <body>
   <script>
     // Your p5.js sketch code goes here
@@ -17,10 +26,10 @@
     let lineColor = '#ADD8E6';
     let nodeSize = 3;
     let lineDistance = 200;
-    let nodeSpeed = 0.2;
-    let mouseInfluenceRadius = 200;
-    let mouseInfluenceStrength = 0.1;
-    let maxNodes = 50;
+    let nodeSpeed = 0.8;
+    let mouseInfluenceRadius = 200; // Radius within which the mouse will influence the movement of the nodes
+    let mouseInfluenceStrength = 0.2; // How strongly the nodes are attracted to the mouse
+    let maxNodes = 50; // Maximum number of nodes
 
     let nodes = [];
 
@@ -33,7 +42,8 @@
     }
 
     function draw() {
-      background('#f8f8f8');
+      background('rgba(248, 248, 248, 0.5)');
+      // Draw lines between close nodes
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           let d = dist(nodes[i].pos.x, nodes[i].pos.y, nodes[j].pos.x, nodes[j].pos.y);
@@ -73,7 +83,9 @@
       }
 
       update() {
+        this.vel.limit(nodeSpeed); // Limit the velocity to nodeSpeed
         this.pos.add(this.vel);
+        // Wrap around the edges
         if (this.pos.x < 0) this.pos.x = width;
         if (this.pos.x > width) this.pos.x = 0;
         if (this.pos.y < 0) this.pos.y = height;
@@ -85,6 +97,7 @@
         ellipse(this.pos.x, this.pos.y, nodeSize);
       }
     }
+    
   </script>
 </body>
 </html>
