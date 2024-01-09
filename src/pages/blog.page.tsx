@@ -24,14 +24,14 @@ const BlogPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       {page.seoFields && <SeoFields {...page.seoFields} />}
-      <Container style={{ padding: 'var(--page-padding)' }}>
+      <Container style={{ padding: 'var(--page-padding)', backgroundColor: 'var(--background-color)' }}>
       
         <Link href={`/${page.featuredBlogPost.slug}`} legacyBehavior>
           <ArticleHero article={page.featuredBlogPost} />
         </Link>
       </Container>
 
-      <Container style={{ padding: 'var(--page-padding)' }}>
+      <Container style={{ padding: 'var(--page-padding)' , backgroundColor: 'var(--background-color)'}}>
         <h2 className="mb-4 md:mb-6">{t('landingPage.latestArticles')}</h2>
         <ArticleTileGrid className="md:grid-cols-2 lg:grid-cols-3" articles={posts} />
       </Container>

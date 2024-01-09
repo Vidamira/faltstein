@@ -94,53 +94,71 @@
     }
   }
 
- /* Dark mode toggle styles */
 /* Dark mode toggle styles */
 .darkModeToggle {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .darkModeButton {
-    width: 48px;
-    height: 24px;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    border-radius: 12px;
-    cursor: pointer;
-    margin-left: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the icon horizontally */
-    padding: 2px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Added box shadow */
-    overflow: hidden; /* Hide overflow for sun/moon icons */
+  width: 24px;
+  height: 24px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 12px;
+  cursor: pointer;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread icons to both sides */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Added box shadow */
+  overflow: hidden; /* Hide overflow for sun/moon icons */
+  position: relative; /* Added relative positioning for the sliding effect */
+}
+
+.darkModeButtonIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-color); /* Icon color */
+  transition: transform 0.3s ease; /* Added transform transition for sliding effect */
+  position: absolute;
+  left: 2px; /* Initial left position for sun icon */
+  display: inline-block; /* Added to align icons properly */
+}
+
+.darkModeButtonIcon.moon {
+  left: auto; /* Reset the moon icon's left position */ /* Move the moon icon to the right */ /* Slide the moon icon to the right */
+}
+
+/* Dark mode button active style */
+.darkModeButtonActive {
+  width: 24px;
+  height: 24px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 12px;
+  cursor: pointer;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread icons to both sides */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Added box shadow */
+  overflow: hidden; /* Hide overflow for sun/moon icons */
+  position: relative; /* Added relative positioning for the sliding effect */
+
+}
+
+.darkModeButtonIcon {
+  width: 18px;
+  height: 18px;
 }
 
 .darkModeButtonActive {
-    width: 48px;
-    height: 24px;
-    background-color: var(--secondary-color); /* Background color for active dark mode */
-    cursor: pointer;
-    margin-left: 16px;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the icon horizontally */
-    border-radius: 12px;
-    padding: 2px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Added box shadow */
-    overflow: hidden; /* Hide overflow for sun/moon icons */
-}
-
-/* Style for sun/moon icons */
-.darkModeButtonIcon {
-    width: 24px;
-    height: 24px;
-    color: var(--text-color); /* Icon color */
-    transition: color 0.3s ease; /* Transition icon color */
+  left: auto; /* Reset the icon's left position when active */
+  right: 2px; /* Move the icon to the right when active */
+  transform: translateX(0); /* Slide the icon to the left when active */
 }
 
 

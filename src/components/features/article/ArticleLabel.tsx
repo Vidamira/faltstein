@@ -1,5 +1,7 @@
+// ArticleLabel.tsx
+
 import { HTMLProps, ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge';
+import styles from './Article.module.css'; // Import the module CSS
 
 interface ArticleLabelProps extends HTMLProps<HTMLSpanElement> {
   children: ReactNode;
@@ -7,13 +9,7 @@ interface ArticleLabelProps extends HTMLProps<HTMLSpanElement> {
 
 export const ArticleLabel = ({ children, className, ...props }: ArticleLabelProps) => {
   return (
-    <span
-      className={twMerge(
-        'rounded bg-purple200 px-2 py-1 text-2xs font-semibold uppercase leading-none tracking-widest text-purple600',
-        className,
-      )}
-      {...props}
-    >
+    <span className={`${styles.label} ${className}`} {...props}>
       {children}
     </span>
   );

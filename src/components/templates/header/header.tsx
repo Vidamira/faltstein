@@ -44,8 +44,6 @@ export const Header = () => {
             </Link>
           </div>
 
-          
-
           {/* Light/Dark mode toggle */}
           <div className={styles.linksRight}>
             {/* Add other middle links here */}
@@ -68,16 +66,23 @@ export const Header = () => {
             </Link>
 
             <button
-                onClick={toggleDarkMode}
-                className={isDarkMode ? styles.darkModeButtonActive : styles.darkModeButton}
+              onClick={toggleDarkMode}
+              className={styles.darkModeButton}
+              style={{
+                backgroundColor: isDarkMode ? 'var(--secondary-color)' : 'var(--background-color)',
+                color: 'var(--text-color)',
+              }}
             >
-                <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className="darkModeButtonIcon" />
+              {isDarkMode ? (
+                <FontAwesomeIcon icon={faMoon} className={styles.darkModeButtonIcon} />
+              ) : (
+                <FontAwesomeIcon icon={faSun} className={styles.darkModeButtonIcon} />
+              )}
             </button>
 
             <div className={styles.languageStyle}>
               <LanguageSelector />
-            </div>    
-            
+            </div>
           </div>
         </Container>
       </nav>

@@ -1,7 +1,7 @@
 import { useContentfulInspectorMode } from '@contentful/live-preview/react';
-
-import { CtfImage } from '@src/components/features/contentful';
 import { PageBlogPostFieldsFragment } from '@src/lib/__generated/sdk';
+import { CtfImage } from '@src/components/features/contentful';
+import styles from './Article.module.css'; // Import the module CSS
 
 interface ArticleAuthorProps {
   article: PageBlogPostFieldsFragment;
@@ -12,10 +12,8 @@ export const ArticleAuthor = ({ article }: ArticleAuthorProps) => {
   const inspectorProps = useContentfulInspectorMode({ entryId: author?.sys.id });
 
   return (
-    <div className="flex items-center">
-      <div
-        className="mr-2 overflow-hidden rounded-full border border-blue500"
-        {...inspectorProps({ fieldId: 'avatar' })}>
+    <div className={styles.authorContainer}>
+      <div className={styles.avatarContainer}>
         {author?.avatar && (
           <CtfImage
             nextImageProps={{
@@ -28,7 +26,7 @@ export const ArticleAuthor = ({ article }: ArticleAuthorProps) => {
           />
         )}
       </div>
-      <span className="text-xs leading-none text-gray600" {...inspectorProps({ fieldId: 'name' })}>
+      <span className={styles.authorName} {...inspectorProps({ fieldId: 'name' })}>
         {author?.name}
       </span>
     </div>

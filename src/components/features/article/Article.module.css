@@ -1,0 +1,143 @@
+/* Author Component Styles */
+.authorContainer {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+  }
+  
+  .avatarContainer {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--text-color); /* Text color variable */
+    margin-right: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .avatarContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .authorName {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color); /* Text color variable */
+  }
+  
+  /* Content Component Styles */
+  .contentContainer {
+    background-color: var(--background-color);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    
+     /* Added box shadow */
+  }
+  
+  /* Hero Component Styles */
+  .heroContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--background-color); /* Background color variable */
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .heroReversed {
+    flex-direction: row-reverse;
+  }
+  
+  .imageContainer {
+    flex-basis: 50%;
+  }
+  
+  .featuredImage {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .textContainer {
+    flex-basis: 50%;
+    padding: 16px;
+    background-color: var(--background-color); /* Background color variable */
+    border-radius: 10px;
+  }
+  
+  .authorLabelContainer {
+    /* Add your styles here */
+  }
+  
+  .featuredLabel {
+    /* Add your styles here */
+  }
+  
+  .publishedDate {
+    font-size: 14px;
+    color: var(--text-color); /* Text color variable */
+    margin-top: 8px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color); /* Text color variable */
+    margin-top: 16px;
+  }
+  
+  .shortDescription {
+    font-size: 16px;
+    color: var(--text-color); /* Text color variable */
+    margin-top: 8px;
+  }
+  
+  .publishedDateMobile {
+    display: none; /* Hide on mobile devices */
+  }
+  
+  /* Image Component Styles */
+  .imageFigure {
+    /* Add your styles here */
+  }
+  
+  .imageCaption {
+    /* Add your styles here */
+  }
+  
+  /* Label Component Styles */
+  .label {
+    /* Add your styles here */
+  }
+  
+  /* Tile Component Styles */
+  .tileContainer {
+    background-color: var(--background-color);
+    color: var(--text-color); 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tileImage {
+    /* Add your styles here */
+  }
+  
+  .tileContent {
+    background-color: var(--background-color);
+    color: var(--text-color); 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tileTitle {
+    color: var(--text-color); 
+  }
+  
+  .tileMeta {
+    color: var(--text-color); 
+  }
+  
+  .tilePublishedDate {
+    color: var(--text-color); 
+  }
+  

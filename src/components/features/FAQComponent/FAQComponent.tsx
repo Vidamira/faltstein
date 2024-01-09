@@ -18,10 +18,10 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   return (
     <div className={styles.faqItem}>
       <button className={styles.question} onClick={toggleOpen}>
-        {question}
-        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+        <span className={styles.questionText}>{question}</span>
+        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} className={styles.icon} />
       </button>
-      {isOpen && <div className={styles.answer}>{answer}</div>}
+      <div className={isOpen ? styles.answerOpen : styles.answer}>{answer}</div>
     </div>
   );
 };
@@ -34,7 +34,7 @@ const FAQComponent: React.FC<FAQComponentProps> = ({ faqsData }) => (
   <div className={styles.faqContentContainer}>
     <div className={styles.faqContainer}>
       <h1 className={styles.faqTitle}>FAQ</h1>
-      <p className={styles.faqSubtitle}>How can we help?</p> {/* Add this line */}
+      <p className={styles.faqSubtitle}>How can we help?</p>
       {faqsData.map((faq, index) => (
         <FAQItem key={index} question={faq.question} answer={faq.answer} />
       ))}
