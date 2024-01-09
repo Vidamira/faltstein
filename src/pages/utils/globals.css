@@ -1,20 +1,21 @@
 /* globals.css */
 
-/* Tailwind CSS styles (keep these) */
+/* Tailwind CSS styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Global styles and variables (add your custom styles here) */
+/* Global styles and variables*/
 
 /* Define custom padding size for components */
 :root {
-  --page-padding: 1.5rem 8rem; /* Adjust the values as needed */
+  --page-padding: 1.5rem 8rem;
 }
 
 /* Define colors and color palette for LIGHT mode */
 :root {
-  --primary-color: #007bff;        /* Primary color (e.g., links, buttons) */
+  --primary-color: #007bff;
+  --lighter-primary-color: #3399ff;       /* Primary color (e.g., links, buttons) */
   --secondary-color: #333;        /* Secondary color (e.g., headings, borders) */
   --background-color: #f8f8f8;    /* Background color for the entire page */
   --text-color: #333;             /* Text color (e.g., body text) */
@@ -23,15 +24,16 @@
 
 /* Define colors and color palette for DARK mode */
 :root.dark {
-  --primary-color: #007bff;        /* Primary color (e.g., links, buttons) */
+  --primary-color: #007bff;
+  --lighter-primary-color: #3399ff;        /* Primary color (e.g., links, buttons) */
   --secondary-color: #333;        /* Secondary color (e.g., headings, borders) */
   --background-color: #111;       /* Dark mode background color */
   --text-color: #fff;             /* Dark mode text color */
   --accent-color: #ffae00;        /* Accent color (e.g., call-to-action) */
 }
 
-/* Global styles */
-/* For example, you can define a class for dark mode */
+
+
 .dark-mode {
   background-color: var(--background-color);
   color: var(--text-color);
