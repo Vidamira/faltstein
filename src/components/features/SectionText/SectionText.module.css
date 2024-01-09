@@ -1,0 +1,32 @@
+/* SectionText.module.css */
+
+.sectionContainer {
+    padding: var(--page-padding);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  .titleContainer {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .titleContainer h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    z-index: 0;
+    color: var(--background-color);
+    line-height: 4rem;
+  }
+  
+  .textContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .textContainer p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  

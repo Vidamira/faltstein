@@ -12,33 +12,18 @@ export const Footer = () => {
       <Container className={styles.footerContainer}>
         <div className={styles.footerContent}>
           <div className={styles.leftContent}>
-            <h2 className={styles.h2}>{t('footer.aboutUs')}</h2>
-            <div className={styles.maxWidth}>{t('footer.description')}</div>
+            <h2 className={styles.h2}>{t('about us')}</h2>
+            <div className={styles.maxWidth}>{t('Berlin based tech agency.')}</div>
           </div>
           <div className={styles.rightContent}>
-            <Link
-              href="https://www.example.com/link1"
-              rel="noopener noreferrer"
-              target="_blank"
-              className={styles.link}
-            >
-              Link 1
+            <Link href="/imprint" className={styles.link}>
+              {t('imprint')}
             </Link>
-            <Link
-              href="https://www.example.com/link2"
-              rel="noopener noreferrer"
-              target="_blank"
-              className={styles.link}
-            >
-              Link 2
+            <Link href="/terms" className={styles.link}>
+              {t('terms & conditions')}
             </Link>
-            <Link
-              href="https://www.example.com/link3"
-              rel="noopener noreferrer"
-              target="_blank"
-              className={styles.link}
-            >
-              Link 3
+            <Link href="/contact" className={styles.link}>
+              {t('contact')}
             </Link>
           </div>
         </div>

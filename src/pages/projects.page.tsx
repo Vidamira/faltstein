@@ -26,43 +26,55 @@ const Page = () => {
         }}
       />
       <CardsComponent
-        heading="How We Help" // Add heading property
+        heading="What we can do for you."
         description="Discover how our agency can transform your business with innovative AI integrations designed to drive growth and efficiency."
         cardsData={[
           {
-            title: 'AI-Powered Solutions',
-            text: 'Unleash the potential of artificial intelligence with our tailored solutions. From chatbots to predictive analytics, we\'ve got you covered.'
+            title: 'AI Integrations',
+            text: 'Unleash the potential of artificial intelligence with our tailored solutions. From chatbots to predictive analytics, we\'ve got you covered.',
+            imageUrl: 'assets/abstract-1.jpg', // Use the correct image URL
+            linkUrl: '/ai-solutions' // Specify the appropriate link URL
           },
           {
-            title: 'Enhanced Decision-Making',
-            text: 'Make data-driven decisions with confidence. Our AI integrations provide actionable insights to guide your strategic choices.'
+            title: 'Decision-Making',
+            text: 'Make data-driven decisions with confidence. Our AI integrations provide actionable insights to guide your strategic choices.',
+            imageUrl: 'assets/abstract-2.jpg', // Use the correct image URL
+            linkUrl: '/decision-making' // Specify the appropriate link URL
           },
           {
-            title: 'Improved Customer Experience',
-            text: 'Deliver exceptional customer service and engagement. Our AI solutions enhance interactions and satisfaction.'
+            title: 'Customer Experience',
+            text: 'Deliver exceptional customer service and engagement. Our AI solutions enhance interactions and satisfaction.',
+            imageUrl: 'assets/abstract-3.jpg', // Use the correct image URL
+            linkUrl: '/customer-experience' // Specify the appropriate link URL
           },
           
-          // Add more cards as needed with their respective titles and text
+          // Add more cards as needed with their respective titles, text, image URLs, and link URLs
         ]}
       />
-      <CardsComponent
-        heading="How We Help" // Add heading property
-        description="Discover how our agency can transform your business with innovative AI integrations designed to drive growth and efficiency."
+       <CardsComponent
+        heading=""
+        description=""
         cardsData={[
           {
-            title: 'AI-Powered Solutions',
-            text: 'Unleash the potential of artificial intelligence with our tailored solutions. From chatbots to predictive analytics, we\'ve got you covered.'
+            title: 'AI Integrations',
+            text: 'Unleash the potential of artificial intelligence with our tailored solutions. From chatbots to predictive analytics, we\'ve got you covered.',
+            imageUrl: 'assets/abstract-1.jpg', // Use the correct image URL
+            linkUrl: '/ai-solutions' // Specify the appropriate link URL
           },
           {
-            title: 'Enhanced Decision-Making',
-            text: 'Make data-driven decisions with confidence. Our AI integrations provide actionable insights to guide your strategic choices.'
+            title: 'Decision-Making',
+            text: 'Make data-driven decisions with confidence. Our AI integrations provide actionable insights to guide your strategic choices.',
+            imageUrl: 'assets/abstract-2.jpg', // Use the correct image URL
+            linkUrl: '/decision-making' // Specify the appropriate link URL
           },
           {
-            title: 'Improved Customer Experience',
-            text: 'Deliver exceptional customer service and engagement. Our AI solutions enhance interactions and satisfaction.'
+            title: 'Customer Experience',
+            text: 'Deliver exceptional customer service and engagement. Our AI solutions enhance interactions and satisfaction.',
+            imageUrl: 'assets/abstract-3.jpg', // Use the correct image URL
+            linkUrl: '/customer-experience' // Specify the appropriate link URL
           },
           
-          // Add more cards as needed with their respective titles and text
+          // Add more cards as needed with their respective titles, text, image URLs, and link URLs
         ]}
       />
       <Hero
