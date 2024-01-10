@@ -70,7 +70,7 @@
 
 .answer {
   padding: 10px;
-  background: var(--background-color);
+  background: var(--acceent-lighter-color);
   color: var(--text-color);
   font-weight: 400;
   border-top: none;

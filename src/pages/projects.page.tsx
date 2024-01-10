@@ -3,6 +3,7 @@ import { Container } from '@src/components/shared/container';
 import { revalidateDuration } from '@src/pages/utils/constants';
 import { useTranslation } from 'next-i18next';
 import { Hero } from '@src/components/features/hero';
+import { HeroVid } from '@src/components/features/HeroVid';
 import { CardsComponent } from '@src/components/features/CardsComponent';
 
 
@@ -17,7 +18,7 @@ const Page = () => {
       <Container>
         {/* Add your static content here */}
         <Hero
-        background="/path/to/your-image.jpg" // Replace with your image URL
+        background="assets/line-bg.png" // Replace with your image URL
         title="PROJECTS"
         subtitle="Want to start a project with us?"
         buttonText="start"
@@ -77,12 +78,11 @@ const Page = () => {
           // Add more cards as needed with their respective titles, text, image URLs, and link URLs
         ]}
       />
-      <Hero
-        background="assets/abstract-1.jpg" // Define the URL for the background
-        title="Lets build"
-        subtitle="start your ai based project with us now."
-        
-      />
+      <HeroVid
+      videoSource="assets/video/vid-abstract-1.mp4" // Define the URL for the video background
+      title="Let's build"
+      subtitle="Start your AI-based project with us now."
+    />
 
 
       

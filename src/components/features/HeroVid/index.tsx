@@ -1,0 +1,1 @@
+export { default as HeroVid } from '../HeroVid/HeroVid';

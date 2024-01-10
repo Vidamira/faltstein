@@ -19,30 +19,32 @@
   --default-secondary-color: #333; /* Secondary color (e.g., headings, borders) */
   --default-background-color: #f8f8f8; /* Light background color for the entire page */
   --default-text-color: #333; /* Dark text color (e.g., body text) */
-  --default-accent-color: #ffae00; /* Accent color (e.g., call-to-action) */
+  --default-accent-color: #ffbc42; /* Accent color (e.g., call-to-action) */
+  --default-accent-lighter-color: #f7d386;
 }
 
-/* Define colors and color palette for DARK mode */
 :root.dark {
-  --default-primary-color: #007bff;
-  --default-lighter-primary-color: #3399ff; /* Primary color (e.g., links, buttons) */
+  --default-primary-color: #003459;
+  --default-lighter-primary-color: #003459; /* Primary color (e.g., links, buttons) */
   --default-secondary-color: #333; /* Secondary color (e.g., headings, borders) */
   --default-background-color: #111; /* Dark background color for the entire page */
-  --default-text-color: #fff; /* Light text color (e.g., body text) */
-  --default-accent-color: #ffae00; /* Accent color (e.g., call-to-action) */
+  --default-text-color: #f8f8f8; 
+  --default-accent-color: #ff9f1c; 
+  --default-accent-lighter-color: #fab04a;
+
 }
 
 /* Define colors and color palette for ALTERNATE 1 mode */
 :root {
-  --alternate1-primary-color: #000814; /* Rich Black */
-  --alternate1-lighter-primary-color: #001d3d; /* Oxford Blue */
+  --alternate1-primary-color: #006ba6; /* Rich Black */
+  --alternate1-lighter-primary-color: #0496ff; /* Oxford Blue */
   --alternate1-secondary-color: #003566; /* Yale Blue */
   --alternate1-background-color: #f8f8f8; /* Light background color */
-  --alternate1-text-color: #ffc300; /* Dark text color */
+  --alternate1-text-color: #8f2d56; /* Dark text color */
   --alternate1-accent-color: #ffd60a; /* Gold */
+  --alternate1-accent-lighter-color: #ffd60a; /* Gold */
 }
 
-/* Define colors and color palette for DARK mode - ALTERNATE 1 */
 :root.dark-alternate1 {
   --alternate1-primary-color: #000814; /* Rich Black */
   --alternate1-lighter-primary-color: #001d3d; /* Oxford Blue */
@@ -50,6 +52,8 @@
   --alternate1-background-color: #1a1d29; /* Dark background color */
   --alternate1-text-color: #fff; /* Light text color */
   --alternate1-accent-color: #ffd60a; /* Gold */
+  --alternate1-accent-lighter-color: #ffd60a; /* Gold */
+
 }
 
 /* Define colors and color palette for ALTERNATE 2 mode */
@@ -60,9 +64,9 @@
   --alternate2-background-color: #f8f8f8; /* Light background color */
   --alternate2-text-color: #d9d9d9; /* Dark text color */
   --alternate2-accent-color: #284b63; /* Indigo Dye */
+  --alternate2-accent-lighter-color: #ffd60a;
 }
 
-/* Define colors and color palette for DARK mode - ALTERNATE 2 */
 :root.dark-alternate2 {
   --alternate2-primary-color: #353535; /* Jet */
   --alternate2-lighter-primary-color: #3c6e71; /* Caribbean Current */
@@ -70,6 +74,7 @@
   --alternate2-background-color: #1a1d29; /* Dark background color */
   --alternate2-text-color: #fff; /* Light text color */
   --alternate2-accent-color: #284b63; /* Indigo Dye */
+  --alternate2-accent-lighter-color: #ffd60a;
 }
 
 /* Define colors and color palette for ALTERNATE 3 mode */
@@ -80,9 +85,9 @@
   --alternate3-background-color: #f8f8f8; /* Light background color */
   --alternate3-text-color: #508aa8; /* Dark text color */
   --alternate3-accent-color: #c8e0f4; /* Columbia Blue */
+  --alternate3-accent-lighter-color: #ffd60a;
 }
 
-/* Define colors and color palette for DARK mode - ALTERNATE 3 */
 :root.dark-alternate3 {
   --alternate3-primary-color: #ba1200; /* Engineering Orange */
   --alternate3-lighter-primary-color: #031927; /* Rich Black */
@@ -90,6 +95,7 @@
   --alternate3-background-color: #1a1d29; /* Dark background color */
   --alternate3-text-color: #fff; /* Light text color */
   --alternate3-accent-color: #c8e0f4; /* Columbia Blue */
+  --alternate3-accent-lighter-color: #ffd60a;
 }
 
 .dark-mode {

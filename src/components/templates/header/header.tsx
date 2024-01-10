@@ -7,7 +7,7 @@ import { LanguageSelector } from '@src/components/features/language-selector';
 import { Container } from '@src/components/shared/container';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon, faPaintbrush } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './header.module.css'; // Import the CSS module
 
@@ -105,8 +105,12 @@ export const Header = () => {
               onClick={toggleColorScheme}
               className={`${styles.colorSchemeToggle} ${colorScheme === 'alternate1' ? styles.colorSchemeToggleActive : ''}`}
             >
-              <i className={`colorSchemeToggleIcon ${colorScheme === 'alternate1' ? 'active' : ''} fas fa-paint-brush`}></i>
+              <FontAwesomeIcon 
+                icon={faPaintbrush} 
+                className={`${styles.colorSchemeToggleIcon} ${colorScheme === 'alternate1' ? styles.active : ''}`} 
+              />
             </button>
+
 
             <div className={styles.languageStyle}>
               <LanguageSelector />

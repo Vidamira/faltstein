@@ -167,7 +167,8 @@
   width: 30px; /* Adjusted width for toggle */
   height: 30px; /* Adjusted height for toggle */
   background-color: var(--primary-color);
-  color: var(--text-color);
+ 
+
   border-radius: 50%; /* Make it a circle */
   cursor: pointer;
   margin-left: 16px;
@@ -183,11 +184,12 @@
 }
 
 .colorSchemeToggleIcon {
-  width: 18px; /* Adjusted width for the icon */
-  height: 18px; /* Adjusted height for the icon */
-  font-size: 18px; /* Font size for icon */
-  color: inherit; /* Inherit color from parent */
+  width: 16px; /* Adjusted width for the icon */
+  height: 16px; /* Adjusted height for the icon */
+  font-size: 16px; /* Font size for icon */
+  color: var(--background-color); /* Inherit color from parent */
   transition: transform 0.3s ease;
+  
 }
 
 /* Style for the active color scheme button */

@@ -1,4 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { useRouter } from 'next/router';
 import { Container } from '@src/components/shared/container';
 import { revalidateDuration } from '@src/pages/utils/constants';
 import { useTranslation } from 'next-i18next';
@@ -8,7 +9,11 @@ import { FAQComponent } from '@src/components/features/FAQComponent';
 import { AlternatingGridComponent } from '@src/components/features/AlternatingGridComponent';
 import { SectionContainerMedia } from '@src/components/features/SectionContainerMedia';
 
+
+
+
 const Page = () => {
+  const router = useRouter();
   const { t } = useTranslation();
 
   return (
@@ -20,9 +25,9 @@ const Page = () => {
         {/* Add your static content here */}
         <Hero
         background="assets/abstract-1.jpg" // Define the URL for the background
-        title="Your Title"
-        subtitle="Your Subtitle"
-        buttonText="Your Button Text"
+        title="Connecting your business and AI."
+        subtitle="Berlin based tech agency specializing in automatic websites and connecting clients with artificial intelligence."
+        buttonText="Start Project"
         onClick={() => {}}
       />
       <CardsComponent
@@ -68,12 +73,25 @@ const Page = () => {
       <AlternatingGridComponent
           items={[
             { type: 'image', imageUrl: '/assets/abstract-1.jpg' },
-            { type: 'text', title: 'Title 1', rowClass: '1', buttonText: 'Button 1', onButtonClick: () => {} },
-            { type: 'text', title: 'Title 2', rowClass: '2', buttonText: 'Button 2', onButtonClick: () => {} },
+            { 
+              type: 'text', 
+              title: 'Blog', 
+              rowClass: '1', 
+              buttonText: 'Read More', 
+              onButtonClick: () => router.push('/blog')
+            },
+            { 
+              type: 'text', 
+              title: 'Projects', 
+              rowClass: '2', 
+              buttonText: 'Read More', 
+              onButtonClick: () => router.push('/projects')
+            },
             { type: 'image', imageUrl: '/assets/abstract-2.jpg' },
-            // ... add more items as needed
+            // ... more items
           ]}
         />
+
 
           <Hero
             background="assets/abstract-3.jpg" // Define the URL for the background
