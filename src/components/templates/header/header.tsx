@@ -80,11 +80,11 @@ export const Header = () => {
               Projects
             </Link>
 
-            <Link
+            {/* <Link
               href="/blog"
               className={router.pathname === '/blog' ? styles.activeLink : styles.link}>
               Blog
-            </Link>
+            </Link> */}
 
             <button
               onClick={toggleDarkMode}
@@ -101,7 +101,7 @@ export const Header = () => {
               )}
             </button>
 
-            <button
+            {/* <button
               onClick={toggleColorScheme}
               className={`${styles.colorSchemeToggle} ${colorScheme === 'alternate1' ? styles.colorSchemeToggleActive : ''}`}
             >
@@ -109,7 +109,7 @@ export const Header = () => {
                 icon={faPaintbrush} 
                 className={`${styles.colorSchemeToggleIcon} ${colorScheme === 'alternate1' ? styles.active : ''}`} 
               />
-            </button>
+            </button> */}
 
 
             <div className={styles.languageStyle}>

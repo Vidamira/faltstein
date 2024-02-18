@@ -15,17 +15,6 @@ const Page = () => {
     // Handle button click logic here
   };
 
-  const leftColumnContent = {
-    h1Text: "who we are",
-    h3Text: "We are a tech agency specializing in automatic websites and connecting clients with artificial intelligence.",
-  };
-
-  const rightColumnContent = {
-    h1Text: "what we do",
-    pText: "We provide cutting-edge technology solutions to automate your business processes and leverage the power of artificial intelligence.",
-    buttonText: "Start Automating",
-  };
-
   return (
     <>
       <Container>
@@ -41,49 +30,57 @@ const Page = () => {
         />
 
         <SectionContainer
-          leftColumnContent={leftColumnContent}
-          rightColumnContent={rightColumnContent}
+          leftColumnContent={{
+            h1Text: "who we are",
+            h3Text: "We are a tech agency specializing in automatic websites and connecting clients with artificial intelligence.",
+          }}
+          rightColumnContent={{
+            h1Text: "what we do",
+            pText: "We provide cutting-edge technology solutions to automate your business processes and leverage the power of artificial intelligence.",
+            buttonText: "Start Automating",
+          }}
         />
+
         <CardsComponent
-        heading="How We Help"
-        description="Discover how our agency can transform your business with innovative AI integrations designed to drive growth and efficiency."
-        cardsData={[
-          {
-            title: 'AI Integrations',
-            text: 'Unleash the potential of artificial intelligence with our tailored solutions. From chatbots to predictive analytics, we\'ve got you covered.',
-            imageUrl: 'assets/abstract-1.jpg', // Use the correct image URL
-            linkUrl: '/ai-solutions' // Specify the appropriate link URL
-          },
-          {
-            title: 'Decision-Making',
-            text: 'Make data-driven decisions with confidence. Our AI integrations provide actionable insights to guide your strategic choices.',
-            imageUrl: 'assets/abstract-2.jpg', // Use the correct image URL
-            linkUrl: '/decision-making' // Specify the appropriate link URL
-          },
-          {
-            title: 'Customer Experience',
-            text: 'Deliver exceptional customer service and engagement. Our AI solutions enhance interactions and satisfaction.',
-            imageUrl: 'assets/abstract-3.jpg', // Use the correct image URL
-            linkUrl: '/customer-experience' // Specify the appropriate link URL
-          },
-          // Add more cards as needed with their respective titles, text, image URLs, and link URLs
-        ]}
-      />
-      <AlternatingGridComponent
-          items={[
-            { type: 'image', imageUrl: '/assets/abstract-1.jpg' },
-            { type: 'text', title: 'Title 1', rowClass: '1', buttonText: 'Button 1', onButtonClick: () => {} },
-            { type: 'text', title: 'Title 2', rowClass: '2', buttonText: 'Button 2', onButtonClick: () => {} },
-            { type: 'image', imageUrl: '/assets/abstract-2.jpg' },
-            // ... add more items as needed
+          heading="How We Help"
+          description="Discover how our agency can transform your business with innovative AI integrations designed to drive growth and efficiency."
+          cardsData={[
+            {
+              title: 'AI Integrations',
+              text: 'Unleash the potential of artificial intelligence with our tailored solutions. From chatbots to predictive analytics, we\'ve got you covered.',
+              imageUrl: 'assets/abstract-1.jpg', // Use the correct image URL
+              linkUrl: '/ai-solutions' // Specify the appropriate link URL
+            },
+            {
+              title: 'Decision-Making',
+              text: 'Make data-driven decisions with confidence. Our AI integrations provide actionable insights to guide your strategic choices.',
+              imageUrl: 'assets/abstract-2.jpg', // Use the correct image URL
+              linkUrl: '/decision-making' // Specify the appropriate link URL
+            },
+            {
+              title: 'Customer Experience',
+              text: 'Deliver exceptional customer service and engagement. Our AI solutions enhance interactions and satisfaction.',
+              imageUrl: 'assets/abstract-3.jpg', // Use the correct image URL
+              linkUrl: '/customer-experience' // Specify the appropriate link URL
+            },
+            // Add more cards as needed with their respective titles, text, image URLs, and link URLs
           ]}
         />
+
+        {/* <AlternatingGridComponent
+            items={[
+              { type: 'image', imageUrl: '/assets/abstract-1.jpg' },
+              { type: 'text', title: 'Title 1', rowClass: '1', buttonText: 'Button 1', onButtonClick: () => {} },
+              { type: 'text', title: 'Title 2', rowClass: '2', buttonText: 'Button 2', onButtonClick: () => {} },
+              { type: 'image', imageUrl: '/assets/abstract-2.jpg' },
+              // ... add more items as needed
+            ]}
+          /> */}
+        
         <Hero
-            background="assets/abstract-3.jpg" // Define the URL for the background
-            title="what are you automating today?"
-            
-            
-          />
+          background="assets/abstract-3.jpg" // Define the URL for the background
+          title="what are you automating today?"
+        />
       </Container>
     </>
   );

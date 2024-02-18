@@ -8,8 +8,8 @@ import { CardsComponent } from '@src/components/features/CardsComponent';
 import { FAQComponent } from '@src/components/features/FAQComponent';
 import { AlternatingGridComponent } from '@src/components/features/AlternatingGridComponent';
 import { SectionContainerMedia } from '@src/components/features/SectionContainerMedia';
-
-
+import { SectionContainer } from '@src/components/features/SectionContainer';
+import { ContinuousCarousel } from '@src/components/features/ContinuousCarousel';
 
 
 const Page = () => {
@@ -25,37 +25,50 @@ const Page = () => {
         {/* Add your static content here */}
         <Hero
         background="assets/abstract-1.jpg" // Define the URL for the background
-        title="Connecting your business and AI."
+        title="Not sure what ai your business needs?."
         subtitle="Berlin based tech agency specializing in automatic websites and connecting clients with artificial intelligence."
-        buttonText="Start Project"
+        buttonText="find out"
         onClick={() => {}}
       />
+      
+      <SectionContainer
+          leftColumnContent={{
+            h1Text: "Who We Are",
+            h3Text: "Welcome to our tech agency, where innovation meets expertise. We specialize in crafting dynamic solutions for your digital needs.",
+          }}
+          rightColumnContent={{
+            h1Text: "Let's Kickstart Your AI Journey",
+            pText: "Ready to revolutionize your business with artificial intelligence? Take the first step towards digital transformation today. Sign up for a free consultation and let's get started on your pilot project for as low as €500!",
+            buttonText: "Book Your Free Consultation",
+          }}
+        />
+
       <CardsComponent
-        heading="What we can do for you."
-        description="Discover how our agency can transform your business with innovative AI integrations designed to drive growth and efficiency."
-        cardsData={[
-          {
-            title: 'AI Integrations',
-            text: 'Unleash the potential of artificial intelligence with our tailored solutions. From chatbots to predictive analytics, we\'ve got you covered.',
-            imageUrl: 'assets/abstract-1.jpg', // Use the correct image URL
-            linkUrl: '/ai-solutions' // Specify the appropriate link URL
-          },
-          {
-            title: 'Decision-Making',
-            text: 'Make data-driven decisions with confidence. Our AI integrations provide actionable insights to guide your strategic choices.',
-            imageUrl: 'assets/abstract-2.jpg', // Use the correct image URL
-            linkUrl: '/decision-making' // Specify the appropriate link URL
-          },
-          {
-            title: 'Customer Experience',
-            text: 'Deliver exceptional customer service and engagement. Our AI solutions enhance interactions and satisfaction.',
-            imageUrl: 'assets/abstract-3.jpg', // Use the correct image URL
-            linkUrl: '/customer-experience' // Specify the appropriate link URL
-          },
-          
-          // Add more cards as needed with their respective titles, text, image URLs, and link URLs
-        ]}
-      />
+            heading="Case Studies"
+            description="Explore our case studies to see how we've helped clients achieve success with our innovative solutions."
+            cardsData={[
+              {
+                title: 'Case Study 1',
+                text: 'Enhancing E-commerce Personalization with Machine Learning',
+                imageUrl: 'assets/abstract-1.jpg',
+                linkUrl: '/caseStudy?id=1'
+              },
+              {
+                title: 'Case Study 2',
+                text: 'Building Scalable Web Applications with Python and React',
+                imageUrl: 'assets/abstract-2.jpg',
+                linkUrl: '/caseStudy?id=2'
+              },
+              {
+                title: 'Case Study 3',
+                text: 'Optimizing Server-Side Performance with Advanced Backend Solutions',
+                imageUrl: 'assets/abstract-3.jpg',
+                linkUrl: '/caseStudy?id=3'
+              },
+             
+            ]}
+          />
+          <ContinuousCarousel folderPath="../public/assets/techstack-logo-icons" />
 
 
       <FAQComponent faqsData={[

@@ -1,0 +1,40 @@
+.carouselContainer {
+    overflow: hidden;
+    padding: 2rem 0; /* Add top and bottom padding */
+  }
+  
+  .carouselTrack {
+    display: flex;
+    animation: scrollLeft 40s linear infinite; /* Change animation duration */
+  }
+  
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .carouselItem {
+    flex-shrink: 0;
+     /* Add cursor pointer */
+    transition: transform 0.2s ease; /* Add transition effect */
+  }
+  
+  .carouselItem:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .carouselImage {
+    width: 50px;
+    height: auto;
+    margin: 10px 30px;
+  }
+  
+  /* Apply colors from global styles */
+  .carouselContainer {
+    background-color: var(--background-color);
+  }
+  
