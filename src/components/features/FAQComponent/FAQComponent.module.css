@@ -1,7 +1,7 @@
 /* FAQComponent.module.css */
 
 .faqContainer {
-  background-color: var(--accent-color);
+  background-color: var(--primary-color);
   margin: 0px;
   padding: var(--page-padding);
   text-align: center;

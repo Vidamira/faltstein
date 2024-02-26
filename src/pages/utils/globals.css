@@ -14,8 +14,8 @@
 
 /* Define colors and color palette for LIGHT mode */
 :root {
-  --default-primary-color: #007bff;
-  --default-lighter-primary-color: #3399ff; /* Primary color (e.g., links, buttons) */
+  --default-primary-color: #858585;
+  --default-lighter-primary-color: #a3a3a3; /* Primary color (e.g., links, buttons) */
   --default-secondary-color: #333; /* Secondary color (e.g., headings, borders) */
   --default-background-color: #f8f8f8; /* Light background color for the entire page */
   --default-text-color: #333; /* Dark text color (e.g., body text) */
@@ -24,8 +24,8 @@
 }
 
 :root.dark {
-  --default-primary-color: #003459;
-  --default-lighter-primary-color: #003459; /* Primary color (e.g., links, buttons) */
+  --default-primary-color: #444444;
+  --default-lighter-primary-color: #555555; /* Primary color (e.g., links, buttons) */
   --default-secondary-color: #333; /* Secondary color (e.g., headings, borders) */
   --default-background-color: #111; /* Dark background color for the entire page */
   --default-text-color: #f8f8f8; 

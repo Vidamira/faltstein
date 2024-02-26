@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Mesh Wave with p5.js</title>
+  <!-- Include p5.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent scrolling */
+      height: 100%;
+    }
+    canvas {
+      display: block; /* Remove canvas margin */
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let cols, rows;
+    let scale = 20;
+    // Adjusted width and height to cover the canvas
+    let w = 2400;
+    let h = 1600;
+    let flying = 0;
+
+    function setup() {
+      createCanvas(window.innerWidth, window.innerHeight, WEBGL);
+      cols = w / scale;
+      rows = h / scale;
+      // Position the scene to be viewed at an angle
+      camera(0, -600, (height / 2) / tan(PI / 6), 0, 0, 0, 0, 1, 0);
+    }
+
+    function draw() {
+      flying -= 0.005;
+      background('#F8F8F8'); // Change background color to #F8F8F8
+      stroke('#88949E'); // Update the stroke color to #88949E
+      fill('#A6B3BA'); // Set the fill color to #A6B3BA
+
+      translate(-w / 4, -h / 4, 0);
+      rotateX(PI / 3);
+
+      let yoff = flying;
+      for (let y = 0; y < rows - 1; y++) {
+        beginShape(TRIANGLE_STRIP);
+        let xoff = 0;
+        for (let x = 0; x < cols; x++) {
+          let mouseEffect = map(dist(mouseX, mouseY, x * scale, y * scale), 0, 600, 100, 0);
+          let height = map(noise(xoff, yoff), 0, 1, -mouseEffect, mouseEffect);
+          vertex(x * scale, y * scale, height);
+          vertex(x * scale, (y + 1) * scale, height);
+          xoff += 0.1;
+        }
+        yoff += 0.1;
+        endShape();
+      }
+    }
+
+    function windowResized() {
+      resizeCanvas(window.innerWidth, window.innerHeight);
+    }
+  </script>
+</body>
+</html>

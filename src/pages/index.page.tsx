@@ -10,7 +10,7 @@ import { AlternatingGridComponent } from '@src/components/features/AlternatingGr
 import { SectionContainerMedia } from '@src/components/features/SectionContainerMedia';
 import { SectionContainer } from '@src/components/features/SectionContainer';
 import { ContinuousCarousel } from '@src/components/features/ContinuousCarousel';
-
+import { HeroP5 } from '@src/components/features/HeroP5';
 
 const Page = () => {
   const router = useRouter();
@@ -23,13 +23,15 @@ const Page = () => {
 
       <Container>
         {/* Add your static content here */}
-        <Hero
-        background="assets/abstract-1.jpg" // Define the URL for the background
-        title="Not sure what ai your business needs?."
-        subtitle="Berlin based tech agency specializing in automatic websites and connecting clients with artificial intelligence."
-        buttonText="find out"
-        onClick={() => {}}
-      />
+        <HeroP5
+          background="/p5sketch.html" // Replace with the path to your p5.js sketch
+          title="LET'S AUTOMATE TOGETHER."
+          subtitle="Discover amazing content here."
+          buttonText="Learn More"
+          onClick={() => {
+            // Handle button click event here
+          }}
+        />
       
       <SectionContainer
           leftColumnContent={{

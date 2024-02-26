@@ -20,7 +20,7 @@ const Page = () => {
       <Container>
         {/* Add your static content here */}
         <HeroP5
-          background="/p5sketch.html" // Replace with the path to your p5.js sketch
+          background="/p5sketchAlt.html" // Replace with the path to your p5.js sketch
           title="LET'S AUTOMATE TOGETHER."
           subtitle="Discover amazing content here."
           buttonText="Learn More"
