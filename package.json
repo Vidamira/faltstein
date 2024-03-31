@@ -2,10 +2,6 @@
   "name": "template-blog-webapp-nextjs",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=18",
-    "npm": "Please use Yarn"
-  },
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",

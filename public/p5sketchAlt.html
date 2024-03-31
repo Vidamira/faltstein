@@ -23,8 +23,8 @@
     let cols, rows;
     let scale = 20;
     // Adjusted width and height to cover the canvas
-    let w = 2400;
-    let h = 1600;
+    let w = 1400;
+    let h = 1200;
     let flying = 0;
 
     function setup() {
@@ -32,11 +32,11 @@
       cols = w / scale;
       rows = h / scale;
       // Position the scene to be viewed at an angle
-      camera(0, -600, (height / 2) / tan(PI / 6), 0, 0, 0, 0, 1, 0);
+      camera(0, -900, (height / 2) / tan(PI / 6), 0, 0, 0, 0, 1, 0);
     }
 
     function draw() {
-      flying -= 0.005;
+      flying -= 0.05;
       background('#F8F8F8'); // Change background color to #F8F8F8
       stroke('#88949E'); // Update the stroke color to #88949E
       fill('#A6B3BA'); // Set the fill color to #A6B3BA

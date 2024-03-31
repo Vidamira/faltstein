@@ -6,19 +6,19 @@
   height: 75vh; /* 75% of the viewport's height */
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: left;
+  text-align: left;
   overflow: hidden; /* Hide any overflowing content */
 }
 
 .p5Sketch {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%; /* Full width of the parent container */
-  height: 100%; /* Full height of the parent container */
+  left: 50%;
+  width: 50%;
+  height: 100%;
   border: none;
-  z-index: 10;
+  z-index: 9;
   opacity: 50%;
 }
 
@@ -35,7 +35,7 @@
   padding: var(--page-padding);
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -45,6 +45,8 @@
   font-weight: bold;
   color: var(--text-color);
   margin-bottom: 1rem;
+  margin-right: auto;
+  margin-left: 0;
 }
 
 /* Styles for the h3 element */
